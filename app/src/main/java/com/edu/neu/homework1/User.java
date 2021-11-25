@@ -1,9 +1,11 @@
 package com.edu.neu.homework1;
 
+import java.io.Serializable;
+
 /**
  * 用户的实体类，有用户名，密码，邮箱，电话，地址，生日
  */
-public class User {
+public class User implements Serializable {
     private String username;
     private String password;
     private String email;
@@ -70,4 +72,9 @@ public class User {
     public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
+
+    /**
+     * Serializable
+     */
+    private static final long serialVersionUID = 1L;
 }

@@ -36,6 +36,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private TextView textView1;
     private ImageView imageView;
     private String realCode;
+    //创建一个对象用来传递
+    User findUser ;
 
 
     /**
@@ -107,6 +109,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 String password = editText2.getText().toString().trim();
                 String verCode = editText8.getText().toString().toLowerCase();
 
+
+
                 //进行匹配验证，,先判断一下用户名密码是否为空，
                 if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password) &&!TextUtils.isEmpty(verCode)){
                     ArrayList<User> data = myHelper.getAllData();
@@ -117,6 +121,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                         if(username.equals(user.getUsername()) && password.equals(user.getPassword())){
                             // 一旦匹配，立即将match = true
                             match=true;
+                            //把找到的对象进行引用
+                            findUser=user;
                             break;
                         }else{
                             //否则 一直匹配到结束 match = false；
@@ -127,8 +133,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     if(verCode.equals(realCode)){
                         //用户名和密码匹配
                         if(match){
+
+                            // bundle
+                            Bundle bundle1 = new Bundle();
+                            bundle1.putSerializable("FindUser",findUser);
+
                             Toast.makeText(this, "登录成功", Toast.LENGTH_SHORT).show();
+
+                            //intent
                             Intent intent = new Intent(this, MainActivity.class);
+                            intent.putExtras(bundle1);
+
+                            // navigate
                             startActivity(intent);
                             finish();//销毁此Activity
                         }else {

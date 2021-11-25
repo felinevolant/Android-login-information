@@ -42,6 +42,9 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private Button button2;
     private MyHelper myHelper;
 
+    //一个用户对象
+    User findUser2;
+
 
 
 
@@ -86,6 +89,8 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 String phone=editText6.getText().toString().trim();
                 String address=editText7.getText().toString().trim();
 
+
+
                 if(!TextUtils.isEmpty(username) && !TextUtils.isEmpty(password) && !TextUtils.isEmpty(password1)){
                         if(password.equals(password1)){
 
@@ -95,8 +100,19 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                                 long rowid1=myHelper.add(username,password,email,phone,address);
                                 if(rowid1!=-1){
                                     Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show();
+                                    findUser2=new User(username,password,email,phone,address,null);
+
+                                    // bundle
+                                    Bundle bundle2 = new Bundle();
+                                    bundle2.putSerializable("FindUser",findUser2);
+
+                                    //intent
                                     Intent intent2 = new Intent(this, MainActivity.class);
+                                    intent2.putExtras(bundle2);
+
+                                    // navigate
                                     startActivity(intent2);
+                                    finish();
                                 }else{
                                     Toast.makeText(this, "注册失败", Toast.LENGTH_SHORT).show();
                                 }
