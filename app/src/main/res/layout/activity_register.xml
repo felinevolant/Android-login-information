@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterActivity">
+
+
+    <!--输入用户名-->
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:inputType="textPersonName"
+        android:hint="Username"
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+ />
+
+    <!--输入密码-->
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:inputType="textPassword"
+        android:hint="Password"
+        app:layout_constraintTop_toBottomOf="@id/editText3"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <!--确认密码-->
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:inputType="textPassword"
+        android:hint="Password Again"
+        app:layout_constraintTop_toBottomOf="@id/editText4"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <!--输入邮箱-->
+    <com.edu.neu.homework1.MailBoxAssociateView
+        android:id="@+id/emailMutiAuto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:hint="E-mail"
+        android:completionThreshold="2"
+        app:layout_constraintTop_toBottomOf="@id/editText9"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!--输入电话号码-->
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:inputType="textPersonName"
+        android:hint="Phone"
+        app:layout_constraintTop_toBottomOf="@id/emailMutiAuto"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+    <!--输入地址-->
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="11"
+        android:inputType="textPersonName"
+        android:hint="Adress"
+        app:layout_constraintTop_toBottomOf="@id/editText6"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <!--注册提交按钮-->
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+
+        android:text="REGISTER"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText7" />
+
+
+
+    <TextView
+        android:id="@+id/mustInput1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red"
+        app:layout_constraintRight_toLeftOf="@id/editText3"
+        app:layout_constraintTop_toTopOf="@id/editText3"
+        />
+    <TextView
+        android:id="@+id/mustInput2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red"
+        app:layout_constraintRight_toLeftOf="@id/editText4"
+        app:layout_constraintTop_toTopOf="@id/editText4"
+        />
+    <TextView
+        android:id="@+id/mustInput3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textColor="@color/red"
+        app:layout_constraintRight_toLeftOf="@id/editText9"
+        app:layout_constraintTop_toTopOf="@id/editText9"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
