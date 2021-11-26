@@ -6,8 +6,11 @@
         <entry key="..\:/Android/work_space/homework1/app/src/main/res/drawable/ic_launcher_background.xml" value="0.22239583333333332" />
         <entry key="..\:/Android/work_space/homework1/app/src/main/res/drawable/shape.xml" value="0.16197916666666667" />
         <entry key="..\:/Android/work_space/homework1/app/src/main/res/layout/activity_login.xml" value="0.35820894502642775" />
-        <entry key="..\:/Android/work_space/homework1/app/src/main/res/layout/activity_main.xml" value="0.7164178900528555" />
+        <entry key="..\:/Android/work_space/homework1/app/src/main/res/layout/activity_main.xml" value="0.2364179037174423" />
         <entry key="..\:/Android/work_space/homework1/app/src/main/res/layout/activity_register.xml" value="0.35820894502642775" />
+        <entry key="..\:/Android/work_space/homework1/app/src/main/res/layout/first_fragment.xml" value="0.16259057971014493" />
+        <entry key="..\:/Android/work_space/homework1/app/src/main/res/layout/third_fragment.xml" value="0.1526268115942029" />
+        <entry key="..\:/Android/work_space/homework1/app/src/main/res/menu/menu.xml" value="0.20625" />
       </map>
     </option>
   </component>
