@@ -90,6 +90,29 @@ public class MyHelper extends SQLiteOpenHelper {
         return rowid;
         //db.execSQL("INSERT INTO User (name,password) VALUES(?,?)",new Object[]{name,password});
     }
+    public void update(String username,String password,String email,String phone,String address){
+        //String updateSql= "update User set password=?,email=?,phone=?,address=? where username=?";
+        db.execSQL("update User set password=?,email=?,phone=?,address=? where username=?",new Object[]{password,email,phone,address,username});
+    }
+
+    //根据用户名寻找用户
+    public User findUserByUsername(String username){
+        User thisUser=null;
+        Cursor cursor = db.rawQuery("select * from User where username=?",new String[]{username});
+        while(cursor.moveToNext()){
+            @SuppressLint("Range") String password = cursor.getString(cursor.getColumnIndex("password"));
+            @SuppressLint("Range") String email= cursor.getString(cursor.getColumnIndex("email"));
+            @SuppressLint("Range") String phone = cursor.getString(cursor.getColumnIndex("phone"));
+            @SuppressLint("Range") String address = cursor.getString(cursor.getColumnIndex("address"));
+            @SuppressLint("Range") String birthday = cursor.getString(cursor.getColumnIndex("birthday"));
+
+
+            thisUser= new User(username,password,email,phone,address,birthday);
+        }
+        return thisUser;
+
+    }
+
 
     /**
      * 前三个没啥说的，都是一套的看懂一个其他的都能懂了

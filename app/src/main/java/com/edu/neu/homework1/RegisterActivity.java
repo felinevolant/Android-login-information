@@ -14,8 +14,6 @@ import android.widget.EditText;
 import android.widget.MultiAutoCompleteTextView;
 import android.widget.Toast;
 
-import java.lang.reflect.Array;
-import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -59,6 +57,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setTitle(R.string.register);
         actionBar.setHomeAsUpIndicator(R.drawable.ic_left_back); //修改actionbar左上角返回按钮的图标
 
         //为register设置监听器
@@ -150,9 +149,6 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
         //为emailsuffix设置数据适配器
         emailMutiAuto.setAdapter(adapter);
         emailMutiAuto.setTokenizer(tokenizer);
-
-
-
 
 
 

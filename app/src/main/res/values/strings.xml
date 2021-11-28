@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">homework1</string>
+    <!--定义字符串-->
+    <string name="item1">个人信息修改</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+
 </resources>

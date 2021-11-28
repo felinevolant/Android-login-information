@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoActivity">
+    <!--输入用户名-->
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:hint="Username"
+
+        app:layout_constraintVertical_bias="0.25"
+        app:layout_constraintHorizontal_bias="0.7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <!--输入密码-->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPassword"
+        android:hint="Password"
+        app:layout_constraintTop_toBottomOf="@id/etUsername"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/etUsername"
+
+        />
+
+    <!--输入邮箱-->
+    <com.edu.neu.homework1.MailBoxAssociateView
+        android:id="@+id/emailMutiAuto1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:hint="未填写"
+        android:completionThreshold="2"
+        app:layout_constraintTop_toBottomOf="@id/etPassword"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/etUsername"
+        />
+
+    <!--输入电话号码-->
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:hint="未填写"
+        app:layout_constraintTop_toBottomOf="@id/emailMutiAuto1"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/etUsername"
+        />
+    <!--输入地址-->
+    <EditText
+        android:id="@+id/etAdress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="9"
+        android:inputType="textPersonName"
+        android:hint="未填写"
+        app:layout_constraintTop_toBottomOf="@id/etPhone"
+        android:layout_marginTop="15dp"
+        app:layout_constraintLeft_toLeftOf="@id/etUsername"
+        />
+
+    <TextView
+        android:text="用户名："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/etUsername"
+        app:layout_constraintBaseline_toBaselineOf="@id/etUsername"
+        android:textSize="18dp"/>
+    <TextView
+        android:text="密    码："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/etPassword"
+        app:layout_constraintBaseline_toBaselineOf="@id/etPassword"
+        android:textSize="18dp"/>
+    <TextView
+        android:text="邮    箱："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/emailMutiAuto1"
+        app:layout_constraintBaseline_toBaselineOf="@id/emailMutiAuto1"
+        android:textSize="18dp"/>
+    <TextView
+        android:text="电    话："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/etPhone"
+        app:layout_constraintBaseline_toBaselineOf="@id/etPhone"
+        android:textSize="18dp"/>
+    <TextView
+        android:text="地    址："
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toLeftOf="@id/etAdress"
+        app:layout_constraintBaseline_toBaselineOf="@id/etAdress"
+        android:textSize="18dp"/>
+
+    <!--注册提交按钮-->
+    <Button
+        android:id="@+id/btSubmit"
+        android:layout_width="220dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+
+        android:text="SUBMIT"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etAdress" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

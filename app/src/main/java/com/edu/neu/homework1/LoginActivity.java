@@ -1,5 +1,6 @@
 package com.edu.neu.homework1;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -56,7 +57,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle(R.string.login);
         myHelper = new MyHelper(this);
 
         initView();
