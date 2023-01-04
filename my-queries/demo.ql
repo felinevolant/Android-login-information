@@ -18,4 +18,4 @@ predicate isLogger(MethodAccess call) {
 
 from MethodAccess call
 where isLogger(call)
-select call
+select call,call.getCaller()
