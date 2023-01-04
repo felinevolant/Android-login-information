@@ -1,21 +1,14 @@
 /**
- * @id java/examples/detect-log
- * @name log detection
- * @kind problem
- * @description test for log detection
- * @problem.severity warning
+ * @id java/examples/constructor-call
+ * @name Call to constructor
+ * @description Finds places where we call `new com.example.Class(...)`
+ * @tags call
+ *       constructor
+ *       new
  */
 
 import java
 
-
-predicate isLogger(MethodAccess call) {
-    exists(Method method|call.getMethod() = method and
-    method.getDeclaringType().hasQualifiedName("org.slf4j", "Logger") and 
-    not method.getName().matches("%Enabled"))
-}
-
-
-from MethodAccess call
-where isLogger(call)
-select "The method call is:" + call,call
+from ClassInstanceExpr new
+where new.getConstructedType().hasQualifiedName("com.example", "Class")
+select new
