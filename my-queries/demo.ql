@@ -1,6 +1,7 @@
 /**
  * @id java/examples/eq-true
  * @name Equality test on boolean
+ * @kind problem
  * @description Finds tests like `==true`, `==false`, `!=true`, `!=false`
  * @tags equals
  *       test
