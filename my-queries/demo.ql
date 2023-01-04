@@ -1,6 +1,7 @@
 /**
  * @id java/examples/detect-log
  * @name log detection
+ * @kind problem
  * @description test for log detection
  * @problem.severity warning
  */
