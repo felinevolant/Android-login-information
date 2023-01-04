@@ -2,5 +2,4 @@ name: codeql/java-examples
 groups: 
   - java
   - examples
-dependencies:
-  codeql/java-all: ${workspace}
+libraryPathDependencies: codeql-java
