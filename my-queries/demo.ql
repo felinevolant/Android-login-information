@@ -1,14 +1,14 @@
 /**
- * @id java/examples/constructor-call
- * @name Call to constructor
- * @description Finds places where we call `new com.example.Class(...)`
- * @tags call
- *       constructor
- *       new
+ * @id java/examples/eq-true
+ * @name Equality test on boolean
+ * @description Finds tests like `==true`, `==false`, `!=true`, `!=false`
+ * @tags equals
+ *       test
+ *       boolean
  */
 
 import java
 
-from ClassInstanceExpr new
-where new.getConstructedType().hasQualifiedName("com.example", "Class")
-select new
+from EqualityTest eq
+where eq.getAnOperand() instanceof BooleanLiteral
+select eq,"Find Equality test on boolean"
